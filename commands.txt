@@ -1,0 +1,8 @@
+#to ssh a server from jump host
+ibmssh -i CS1390290 iuxu@AASJCLBHP1000
+
+#to gzip a log file and create a new file with same name at the sametime so that application wont get affected
+gzip -c9 catalina.log > catalina.log.26122019.gz; echo "" > catalina.log
+
+#to fetch files in a particular FS of specifically mentioned size
+find /opt -xdev -type f -size +100000 -exec ls -lrth {} \;
