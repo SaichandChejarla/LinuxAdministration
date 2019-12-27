@@ -6,3 +6,7 @@ gzip -c9 catalina.log > catalina.log.26122019.gz; echo "" > catalina.log
 
 #To fetch files in a particular FS of specifically mentioned size
 find /opt -xdev -type f -size +100000 -exec ls -lrth {} \;
+
+#To display swap usage in % 
+echo;free | awk '/Swap/ { print "Swap usage is "($3/$2)*100 " %"} '; date
+
